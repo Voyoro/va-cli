@@ -1,14 +1,17 @@
 {
   "name": "yskj-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "岩石科技脚手架",
   "main": "index.js",
   "bin": "/bin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "publishConfig": {
+    "registry": "http://114.115.141.234:9091/repository/yskj-npm/"
+  },
   "keywords": [],
-  "author": "",
+  "author": "wy",
   "license": "ISC",
   "dependencies": {
     "chalk": "^4.0.0",
