@@ -66,35 +66,6 @@ export function definePatchCommand(cac: CAC) {
       const outPath = path.join(cwd, 'dev-dist', outName);
       zip.writeZip(outPath);
       // TODO upload to cloud storage
-      // const zipBuffer = zip.toBuffer();
-      // const uploadUrl = 'https://tmpfile.link/api/upload';
-      // try {
-      //   const formData = new FormData();
-
-      //   formData.append('file', new Blob([zipBuffer]), `patch-${uuid}.zip`);
-      //   formData.append('folderId', FOLDER_ID);
-      //   const response = await fetch(uploadUrl, {
-      //     method: 'POST',
-      //     headers: {
-      //       'Authorization': FILE_TOKEN,
-      //     },
-      //     body: formData,
-      //   });
-      //   console.log(response.body)
-      //   if (response.ok) {
-      //     console.log("✅ 补丁上传成功！");
-      //     const content = await response.json() as FileUploadResponse;
-      //     console.log(content);
-      //   } else {
-      //     console.error("❌ 补丁上传失败 已在dev-dist目录下生成zip文件");
-      //     const outPath = path.join(cwd, 'dev-dist', outName);
-      //     zip.writeZip(outPath);
-      //   }
-      // } catch {
-      //   console.error("❌ 上传过程中发生错误 已在dev-dist目录下生成zip文件")
-      //   const outPath = path.join(cwd, 'dev-dist', outName);
-      //   zip.writeZip(outPath);
-      // }
 
       console.log("导出成功：", outName);
       console.log("包含文件数：", manifest.files.length);
