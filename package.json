@@ -1,28 +1,58 @@
 {
-  "name": "yskj-cli",
-  "version": "1.0.1",
-  "description": "岩石科技脚手架",
-  "main": "index.js",
-  "bin": "/bin/index.js",
+  "name": "@v-script/va",
+  "type": "module",
+  "version": "0.0.1",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "bin": {
+    "va": "./bin/va.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsdown"
   },
-  "publishConfig": {
-    "registry": "http://114.115.141.234:9091/repository/yskj-npm/"
-  },
-  "keywords": [],
-  "author": "wy",
-  "license": "ISC",
   "dependencies": {
-    "chalk": "^4.0.0",
-    "child_process": "^1.0.2",
-    "commander": "^12.0.0",
-    "download-git-repo": "^3.0.2",
-    "figlet": "^1.7.0",
-    "fs-extra": "^11.2.0",
-    "git-clone": "^0.2.0",
-    "handlebars": "^4.7.8",
-    "inquirer": "^8.0.0",
-    "ora": "^5.0.1"
+    "@clack/prompts": "catalog:node",
+    "cac": "catalog:node",
+    "execa": "catalog:node",
+    "find-up": "catalog:node",
+    "pathe": "catalog:node"
+  },
+  "devDependencies": {
+    "@antfu/install-pkg": "catalog:node",
+    "@manypkg/get-packages": "catalog:dev",
+    "@types/adm-zip": "catalog:types",
+    "@types/cli-progress": "catalog:types",
+    "@types/node": "catalog:types",
+    "@types/semver": "catalog:types",
+    "adm-zip": "catalog:node",
+    "ansis": "catalog:node",
+    "cli-progress": "catalog:utils",
+    "consola": "catalog:node",
+    "cross-env": "catalog:node",
+    "cspell": "catalog:lint",
+    "diff": "catalog:utils",
+    "eslint": "catalog:lint",
+    "fast-npm-meta": "catalog:dev",
+    "local-pkg": "catalog:node",
+    "nanoid": "catalog:dev",
+    "pkg-types": "catalog:node",
+    "pncat": "catalog:cli",
+    "pnpm-multi-versions": "catalog:dev",
+    "pnpm-workspace-yaml": "catalog:dev",
+    "rimraf": "catalog:node",
+    "semver": "catalog:utils",
+    "taze": "catalog:cli",
+    "tsdown": "catalog:build",
+    "turbo": "catalog:monorepo",
+    "typescript": "catalog:tsc",
+    "unicorn-magic": "catalog:dev",
+    "vitest": "catalog:test",
+    "yocto-spinner": "catalog:prod",
+    "cos-nodejs-sdk-v5": "catalog:node",
+    "package-manager-detector": "catalog:utils"
   }
 }
