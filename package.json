@@ -16,10 +16,15 @@
   },
   "dependencies": {
     "@clack/prompts": "catalog:node",
+    "@vue/compiler-sfc": "catalog:utils",
     "cac": "catalog:node",
     "execa": "catalog:node",
+    "fast-glob": "catalog:utils",
     "find-up": "catalog:node",
-    "pathe": "catalog:node"
+    "open": "^11.0.0",
+    "pathe": "catalog:node",
+    "sirv": "^3.0.2",
+    "ts-morph": "catalog:utils"
   },
   "devDependencies": {
     "@antfu/install-pkg": "catalog:node",
@@ -32,6 +37,7 @@
     "ansis": "catalog:node",
     "cli-progress": "catalog:utils",
     "consola": "catalog:node",
+    "cos-nodejs-sdk-v5": "catalog:node",
     "cross-env": "catalog:node",
     "cspell": "catalog:lint",
     "diff": "catalog:utils",
@@ -39,6 +45,7 @@
     "fast-npm-meta": "catalog:dev",
     "local-pkg": "catalog:node",
     "nanoid": "catalog:dev",
+    "package-manager-detector": "catalog:utils",
     "pkg-types": "catalog:node",
     "pncat": "catalog:cli",
     "pnpm-multi-versions": "catalog:dev",
@@ -51,8 +58,6 @@
     "typescript": "catalog:tsc",
     "unicorn-magic": "catalog:dev",
     "vitest": "catalog:test",
-    "yocto-spinner": "catalog:prod",
-    "cos-nodejs-sdk-v5": "catalog:node",
-    "package-manager-detector": "catalog:utils"
+    "yocto-spinner": "catalog:prod"
   }
 }

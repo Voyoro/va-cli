@@ -2,6 +2,7 @@ import type { CAC } from "cac";
 import { defineApplyCommand } from "./apply";
 import { defineBumpCommand } from "./bump";
 import { defineCleanCommand } from "./clean";
+import { defineGraphCommand } from "./graph";
 import { defineSymlinkCommand } from "./link";
 import { defineLintCommand } from "./lint";
 import { definePatchCommand } from "./patch";
@@ -21,4 +22,5 @@ export function installCommands(cac: CAC) {
   definePatchCommand(cac)
   defineApplyCommand(cac)
   defineSymlinkCommand(cac)
+  defineGraphCommand(cac)
 }

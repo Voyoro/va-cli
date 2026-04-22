@@ -5,7 +5,6 @@ import fs from 'node:fs';
 import path from "node:path";
 import { detect as detectPM } from 'package-manager-detector';
 import { getPackages } from '../utils/monorepo';
-
 export async function defineSymlinkCommand(cac: CAC) {
   cac.command('link', 'By symlink package to joint debugging component package and business package')
     .option('-p,--packagePath <packagePath>', 'Specify the package name of the component to be tested')
@@ -60,7 +59,7 @@ function changeDepend(packages: Package[], name: string, path: string) {
     const updateDependency = (
       dependencyType: 'dependencies' | 'devDependencies' | 'peerDependencies'
     ): boolean => {
-      if (!pkg.packageJson[dependencyType]?.[name]) return false;
+      if (!pkg.packageJson[dependencyType]?.[name] || pkg.packageJson[dependencyType]?.[name] === `link:${path}`) return false;
 
       pkg.packageJson[dependencyType] ??= {};
 
