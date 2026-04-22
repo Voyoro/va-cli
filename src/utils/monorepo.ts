@@ -11,19 +11,19 @@ export function findMonorepoRoot(cwd: string = process.cwd()): string {
       type: 'file',
     },
   )
-  return dirname(lockFile || '')
+  return lockFile ? dirname(lockFile) : cwd
 }
 
-export function getPackagesSync(): Packages {
-  return getPackagesSyncFunc(findMonorepoRoot())
+export function getPackagesSync(cwd: string = process.cwd()): Packages {
+  return getPackagesSyncFunc(findMonorepoRoot(cwd))
 }
 
-export async function getPackages(): Promise<Packages> {
-  return await getPackagesFunc(findMonorepoRoot())
+export async function getPackages(cwd: string = process.cwd()): Promise<Packages> {
+  return await getPackagesFunc(findMonorepoRoot(cwd))
 }
 
-export async function getPackage(pkgName: string): Promise<Package | undefined> {
-  const { packages } = await getPackages()
+export async function getPackage(pkgName: string, cwd: string = process.cwd()): Promise<Package | undefined> {
+  const { packages } = await getPackages(cwd)
   return packages.find(pkg => pkg.packageJson.name === pkgName)
 }
 
