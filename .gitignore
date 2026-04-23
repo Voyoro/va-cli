@@ -11,10 +11,11 @@ node_modules
 .DS_Store
 dist
 *.local
-bin
+/bin
 
 # Editor directories and files
 .idea
+.turbo
 *.suo
 *.ntvs*
 *.njsproj

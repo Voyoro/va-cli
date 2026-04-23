@@ -1,63 +1,36 @@
 {
-  "name": "@v-script/va",
+  "name": "va-cli",
   "type": "module",
-  "version": "0.0.1",
-  "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
-  "bin": {
-    "va": "./bin/va.mjs"
+  "version": "0.0.2",
+  "private": true,
+  "packageManager": "pnpm@10.21.0",
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=9"
   },
-  "files": [
-    "bin",
-    "dist"
-  ],
   "scripts": {
-    "build": "tsdown"
-  },
-  "dependencies": {
-    "@clack/prompts": "catalog:node",
-    "@vue/compiler-sfc": "catalog:utils",
-    "cac": "catalog:node",
-    "execa": "catalog:node",
-    "fast-glob": "catalog:utils",
-    "find-up": "catalog:node",
-    "open": "^11.0.0",
-    "pathe": "catalog:node",
-    "sirv": "^3.0.2",
-    "ts-morph": "catalog:utils"
+    "build": "turbo build",
+    "dev": "va dev",
+    "lint": "va lint",
+    "cspell": "va cspell",
+    "spell": "va spell",
+    "deps": "va upgrade",
+    "clean": "va clean",
+    "release": "va release",
+    "catalog": "va catalog",
+    "syncpack": "va syncpack",
+    "multi-version": "va multi-version",
+    "bootstrap": "pnpm install",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
-    "@antfu/install-pkg": "catalog:node",
-    "@manypkg/get-packages": "catalog:dev",
-    "@types/adm-zip": "catalog:types",
-    "@types/cli-progress": "catalog:types",
-    "@types/node": "catalog:types",
-    "@types/semver": "catalog:types",
-    "adm-zip": "catalog:node",
-    "ansis": "catalog:node",
-    "cli-progress": "catalog:utils",
-    "consola": "catalog:node",
-    "cos-nodejs-sdk-v5": "catalog:node",
     "cross-env": "catalog:node",
     "cspell": "catalog:lint",
-    "diff": "catalog:utils",
     "eslint": "catalog:lint",
-    "fast-npm-meta": "catalog:dev",
-    "local-pkg": "catalog:node",
-    "nanoid": "catalog:dev",
-    "package-manager-detector": "catalog:utils",
-    "pkg-types": "catalog:node",
     "pncat": "catalog:cli",
-    "pnpm-multi-versions": "catalog:dev",
-    "pnpm-workspace-yaml": "catalog:dev",
-    "rimraf": "catalog:node",
-    "semver": "catalog:utils",
     "taze": "catalog:cli",
     "tsdown": "catalog:build",
     "turbo": "catalog:monorepo",
-    "typescript": "catalog:tsc",
-    "unicorn-magic": "catalog:dev",
-    "vitest": "catalog:test",
-    "yocto-spinner": "catalog:prod"
+    "typescript": "catalog:tsc"
   }
 }

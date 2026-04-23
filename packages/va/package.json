@@ -1,0 +1,48 @@
+{
+  "name": "@ebdp-script/va",
+  "type": "module",
+  "version": "0.0.2",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "bin": {
+    "va": "./bin/va.mjs"
+  },
+  "files": [
+    "bin",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "@clack/prompts": "catalog:node",
+    "@ebdp-script/node-va-utils": "workspace:*",
+    "@vue/compiler-sfc": "catalog:utils",
+    "adm-zip": "catalog:node",
+    "cac": "catalog:node",
+    "cli-progress": "catalog:utils",
+    "consola": "catalog:node",
+    "diff": "catalog:utils",
+    "execa": "catalog:node",
+    "fast-glob": "catalog:utils",
+    "fast-npm-meta": "catalog:dev",
+    "local-pkg": "catalog:node",
+    "nanoid": "catalog:dev",
+    "open": "catalog:node",
+    "package-manager-detector": "catalog:utils",
+    "pathe": "catalog:node",
+    "pnpm-multi-versions": "catalog:dev",
+    "rimraf": "catalog:node",
+    "semver": "catalog:utils",
+    "ts-morph": "catalog:utils"
+  },
+  "devDependencies": {
+    "@types/adm-zip": "catalog:types",
+    "@types/cli-progress": "catalog:types",
+    "@types/node": "catalog:types",
+    "@types/semver": "catalog:types",
+    "tsdown": "catalog:build",
+    "typescript": "catalog:tsc"
+  }
+}

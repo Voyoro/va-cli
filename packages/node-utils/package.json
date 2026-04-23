@@ -1,0 +1,39 @@
+{
+  "name": "@ebdp-script/node-va-utils",
+  "type": "module",
+  "version": "0.0.2",
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsdown"
+  },
+  "dependencies": {
+    "@antfu/install-pkg": "catalog:node",
+    "@clack/prompts": "catalog:node",
+    "@manypkg/get-packages": "catalog:dev",
+    "ansis": "catalog:node",
+    "execa": "catalog:node",
+    "find-up": "catalog:node",
+    "pkg-types": "catalog:node",
+    "pnpm-workspace-yaml": "catalog:dev",
+    "ts-morph": "catalog:utils",
+    "yocto-spinner": "catalog:prod"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:types",
+    "tsdown": "catalog:build",
+    "typescript": "catalog:tsc"
+  }
+}
